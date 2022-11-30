@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+    </div>
+    <div>
+      <a href="/articles/new">
+        <button>Add Article</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <% articles.forEach(article=>{ %>
+        <p>Title: <%=article.title %> </p>
+        <a href="/articles/<%= article.id%>">
+          <button>More...</button>
+        </a>
+     <% }) %>
+    </div>
+  </main>
+</body>
+</html>

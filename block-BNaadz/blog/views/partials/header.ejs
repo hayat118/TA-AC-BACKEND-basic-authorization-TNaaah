@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <header class="flex">
+        <a href="/">
+          <h2>HOME</h2>
+        </a>
+        <a href="/articles">
+          <button>Articles</button>
+        </a>
+
+   <% if(user){  %>
+      <nav>
+        <a href=""><%= user.email %></a>
+        <a href="/articles/new">
+          <button>Add Article</button>
+        </a>
+        <a href="/users/logout">
+          <button>Log Out</button>
+        </a>
+      </nav>
+   <% } else { %>
+         <nav>
+          <a href="/users/login">
+            <button>Log In</button>
+          </a>
+          <a href="/users/register">
+            <button>Register</button>
+          </a>
+        </nav>
+    <% }  %>
+
+      
+      </header>
