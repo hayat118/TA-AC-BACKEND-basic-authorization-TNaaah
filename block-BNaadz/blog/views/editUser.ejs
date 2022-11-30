@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <form action="/users/<%= user.id %>" method="POST">
+        <input type="text" name="firstName" placeholder="firstName" value="<%= user.firstName%>">
+        <input type="text" name="lastName" placeholder="lastName" value="<%= user.lastName%>">
+        <input type="text" name="email" placeholder="email" value="<%= user.email%>">
+        <input type="text" name="password" placeholder="password" value="<%= user.password%>">
+        <input type="text" name="city" placeholder="city" value="<%= user.city%>">
+        <input type="submit" value="Edit">
+      </form>
+    </div>
+  </main>
+</body>
+</html>
