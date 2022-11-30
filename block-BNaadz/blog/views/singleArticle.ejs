@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+    </div>
+    <div>
+      <a href="/articles">
+        <button>Back</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>Article Information</h2>
+      <p>Title: <%= article.title %></p>
+      <p>Author: <%= article.authorId.firstName %></p>
+      <p>Summary: <%= article.description %></p>
+      <p>Likes: <%= article.likes %></p>
+      <a href="/articles/<%= article.id %>/likes">
+        <button>Likes</button>
+      </a>
+      <a href="/articles/<%= article.id %>/edit">
+        <button>Edit</button>
+      </a>
+      <a href="/articles/<%= article.id %>/delete">
+        <button>Delete</button>
+      </a>
+    </div>
+    <br>
+    <div>
+        <form action="/articles/<%= article._id %>/comments" method="POST">
+          <h2>Comments...</h2>
+        <input type="text" name="title" placeholder="title"><br><br>
+        <input type="text" name="author" placeholder="author"><br><br>
+        <input type="submit" value="add comment">
+      </form>
+    </div>
+    <div>
+      <% article.commentsId.forEach((comments)=>{  %>
+        <p>Title :  <%=comments.title%></p>
+        <p>Author : <%=comments.author%></p>
+        <p>Likes :  <%=comments.likes%></p>
+        <!-- <a href="/comments/<%=comments.id%>/like"><button>Likes</button></a> -->
+         <!-- <a href="/comments/<%=comments.id%>/edit"><button>Edit</button></a> -->
+         <a href="/comments/<%=comments.id%>/delete"><button>Delete</button></a>
+     <% }) %>
+    </div>
+  </main>
+</body>
+</html>

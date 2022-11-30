@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+      <a href="/articles">
+        <button>Articles</button>
+      </a>
+    </div>
+    <div>
+      <a href="/users/login">
+        <button>Logout</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>User Information</h2>
+      <p>First-Name: <%= user.firstName %></p>
+      <p>Last-Name: <%= user.lastName %></p>
+      <p>Email: <%= user.email %></p>
+      <p>City: <%= user.city %></p>
+      
+      <a href="/users/<%= user.id %>/edit">
+        <button>Edit</button>
+      </a>
+      <a href="/users/<%= user.id %>/delete">
+        <button>Delete</button>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
