@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="flex">
+      <div>
+         <a href="/">
+           <button>HOME</button>
+         </a>
+       </div>
+       <div>
+         <a href="/users/login">
+           <button>User Login</button>
+         </a>
+       </div>
+       <div>
+         <a href="/users/admin">
+           <button>Admin Login</button>
+         </a>
+       </div>
+       <div>
+         <a href="/users/register">
+           <button>Register</button>
+         </a>
+       </div>
+       
+    </header>
+    <main>
+       <div>
+         <h1><%= title %></h1>
+         <p>Welcome to <%= title %></p>
+         <p><%= user.name %></p>
+       </div>
+    </main>
+  
+  </body>
+</html>
