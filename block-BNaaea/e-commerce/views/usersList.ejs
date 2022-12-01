@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+    </div>
+   
+    <div>
+      <a href="/products">
+        <button>Products List</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>Users List</h2>
+      <% users.forEach ((user)=>{ %>
+        <p>Name: <%= user.name %></p>
+        <p>Email: <%= user.email %></p>
+        <p>Password: <%= user.password %></p>
+       
+      <% }) %>
+    </div>
+  </main>
+</body>
+</html>

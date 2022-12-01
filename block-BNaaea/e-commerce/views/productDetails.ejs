@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+    <div>
+      <a href="/">
+        <button>HOME</button>
+      </a>
+    </div>
+    <div>
+      <a href="/products">
+        <button>Back</button>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      <h2>Products Details</h2>
+        <p> Product Name:<%= product.productName %></p>
+        <p> Quantity:<%= product.quantity %></p>
+        <p> Price:<%= product.price %></p>
+        <p> Likes:<%= product.likes %></p>
+        <p> Cart:<%= product.cart %></p>
+    </div>
+    <div>
+      <a href="/products/<%= product.id %>/likes">
+        <button>Likes</button>
+      </a>
+    </div>
+    <div>
+      <a href="/products/<%= product.id %>/cart">
+         <button>Cart</button>
+      </a>
+    </div>
+   
+  </main>
+</body>
+</html>
