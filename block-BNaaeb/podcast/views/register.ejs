@@ -1,0 +1,23 @@
+
+
+<% include partials/header %>
+<main>
+  <div>
+    <h1>Registration Form</h1>
+    <form action="/users/register" method="post">
+      <input type="text" name="name" placeholder="Enter Name">
+      <input type="text" name="email" placeholder="Enter Email">
+      <input type="password" name="password" placeholder="Password">
+      <select name="plan" id="plan">
+        <option value="None">None</option>
+        <option value="Free">Free</option>
+        <option value="VIP">VIP</option>
+        <option value="Premium">Premium</option>
+      </select>
+      <input type="submit" value="Register">
+
+    </form>
+  </div>
+</main>
+
+<% include partials/footer %>

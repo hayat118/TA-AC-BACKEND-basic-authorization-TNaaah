@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel='stylesheet' href='/stylesheets/style.css'>
+  <title>Document</title>
+</head>
+<body>
+  <header class="flex">
+   <% if(user){ %>
+      <h3>User Name: <%= user.name %></h3>
+      <a href="/users/logout">
+        <button>Log Out</button>
+      </a>
+   <% }else{ %>
+       <div>
+          <a href="/">
+            <h1>HOME PAGE</h1>
+          </a>
+          <a href="/users/register">
+            <button>Register</button>
+          </a>
+        </div>
+        <div>
+          <a href="/users/login">
+            <button>User Login</button>
+          </a>
+          <a href="/users/login">
+            <button>Admin Login</button>
+          </a>
+        </div>
+   <% }  %>
+
+
+
+  </header>
