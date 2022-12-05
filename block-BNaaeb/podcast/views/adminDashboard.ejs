@@ -1,0 +1,41 @@
+
+<% include partials/header %>
+<main>
+  <div>
+     <% if(user.isAdmin){ %>
+        <a href="/">HOME</a>
+        <br>
+        <br>
+        <h2>Admin DashBoard</h2>
+        <h3>Admin Name: <%=user.name%></h3>
+        <br><hr>
+        <% podcasts.forEach((podcast)=>{ %>
+            <p>Title : <%=podcast.title%></p>
+            <p>Artists : <%=podcast.artist%></p>
+            <p>Song : <%=podcast.song%></p>
+            <p>PodcastPlan : <%=podcast.podcastplan%></p>
+            <a href="/podcasts/<%=podcast.id%>/delete">DELETE</a>
+            <a href="/podcasts/<%=podcast.id%>/edit">EDIT</a>
+            <br><hr>
+        <% }) %>
+        <%} else if(!user.isAdmin){%>
+            <!-- <a href="/users/logout"><button>LOGOUT</button></a> -->
+           <a href="/">HOME</a>
+           <br>
+           <br>
+
+            <h2>User DashBoard</h2>
+            <h3>User Name: <%=user.name%></h3>
+            <br><hr>
+
+            <% podcasts.forEach((podcast)=>{ %>
+                <p>Title : <%=podcast.title%></p>
+                <p>Artists : <%=podcast.artist%></p>
+                <p>Song : <%=podcast.song%></p>
+                <p>PodcastPlan : <%=podcast.podcastplan%></p>
+                <br><hr>
+            <% })%>
+        <% } %>
+  </div>
+</main>
+<% include partials/footer %>

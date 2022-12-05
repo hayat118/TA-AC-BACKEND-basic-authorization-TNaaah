@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+<main>
+  <div>
+    <% users.forEach((user)=>{ %>
+      <br>
+       <h2>Name:<%= user.name %></h2>
+        <h3>Email:<%= user.email %></h3>
+        <a href="">
+          <button>Edit</button>
+        </a>
+        <a href="">
+          <button>Delete</button>
+        </a>
+        <br>
+        <br>
+        <hr>
+   <% }) %>
+  </div>
+</main>
+
+<% include partials/footer %>
